@@ -29,18 +29,41 @@ function initMobileNav() {
     });
   });
 
+  const setMenuOpen = (isOpen) => {
+    navMenu.classList.toggle("open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+  };
+
   navToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.contains("open");
-    navMenu.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", !isOpen);
+    setMenuOpen(!isOpen);
   });
 
-  // Close menu when a link is clicked
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      navMenu.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setMenuOpen(false);
     });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navMenu.classList.contains("open")) {
+      setMenuOpen(false);
+      navToggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      navMenu.classList.contains("open") &&
+      !navMenu.contains(event.target) &&
+      !navToggle.contains(event.target)
+    ) {
+      setMenuOpen(false);
+    }
   });
 }
 
@@ -86,25 +109,16 @@ function initProjectFilters() {
     btn.addEventListener("click", () => {
       const filter = btn.getAttribute("data-filter");
 
-      // Update active button
-      filterBtns.forEach((b) => b.classList.remove("active"));
+      filterBtns.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
       btn.classList.add("active");
+      btn.setAttribute("aria-pressed", "true");
 
-      // Filter cards
       projectCards.forEach((card) => {
         const category = card.getAttribute("data-category");
-        if (filter === "all" || category === filter) {
-          card.style.display = "flex";
-          card.style.opacity = "0";
-          card.style.transform = "translateY(20px)";
-          requestAnimationFrame(() => {
-            card.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-          });
-        } else {
-          card.style.display = "none";
-        }
+        card.hidden = filter !== "all" && category !== filter;
       });
     });
   });
@@ -207,7 +221,7 @@ function initScrollReveal() {
     "(prefers-reduced-motion: reduce)"
   ).matches;
 
-  if (prefersReducedMotion) return;
+  if (prefersReducedMotion || !("IntersectionObserver" in window)) return;
 
   const observerOptions = {
     threshold: 0.1,
@@ -217,21 +231,18 @@ function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+        entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
   const revealElements = document.querySelectorAll(
-    ".skill-category, .timeline-item, .project-card, .education-card, .contact-item, .contact-form-wrapper, .about-text"
+    ".skill-category, .timeline-item, .project-card, .education-card, .contact-form-wrapper, .about-text"
   );
 
   revealElements.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(30px)";
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    el.classList.add("reveal");
     observer.observe(el);
   });
 }
