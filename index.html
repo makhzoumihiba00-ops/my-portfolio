@@ -6,7 +6,7 @@
   <title>Hiba Makhzoumi | Full-Stack Web Developer</title>
   <meta name="description" content="Hiba Makhzoumi is a full-stack web developer building responsive web applications with HTML, CSS, JavaScript, PHP, Laravel, and React." />
   <meta name="author" content="Hiba Makhzoumi" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#202020" />
   <link rel="canonical" href="https://hibamakhzoumi.online/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hiba Makhzoumi | Full-Stack Web Developer" />
@@ -15,7 +15,11 @@
   <meta property="og:site_name" content="Hiba Makhzoumi" />
   <meta name="twitter:card" content="summary" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23C99041'/%3E%3Ctext x='50' y='55' font-family='serif' font-size='60' text-anchor='middle' fill='%231F1712' font-weight='bold'%3EHM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="hero.css" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,510 +43,800 @@
 
   <header class="header" id="header">
     <nav class="navbar container" aria-label="Main navigation">
-      <a href="#home" class="logo" aria-label="Hiba Makhzoumi homepage">HIBA.DEV</a>
+      <a href="#home" class="logo studio-logo" aria-label="Hiba Makhzoumi homepage">HIBA<span aria-hidden="true">✳</span></a>
 
-      <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="btn btn-primary mobile-header-cv">Download CV</a>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
 
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" aria-current="location">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Work</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="nav-cv-item">
-          <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="btn btn-primary nav-download-cv">Download CV</a>
+        <li class="nav-mobile-actions">
+          <a href="#contact" class="nav-mobile-contact">Let’s talk <span aria-hidden="true">↗</span></a>
+          <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="nav-mobile-cv">Download CV <span aria-hidden="true">↓</span></a>
         </li>
       </ul>
+
+      <div class="nav-actions">
+        <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="nav-cv-link">CV <span aria-hidden="true">↓</span></a>
+        <a href="#contact" class="nav-contact-link">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
     </nav>
   </header>
 
   <main id="content">
-    <section class="hero" id="home" aria-labelledby="hero-heading">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="hero-badge">Full-Stack Web Developer</span>
+    <section class="hero hero--studio" id="home" aria-labelledby="hero-heading">
+      <div class="hero-studio-grid" aria-hidden="true"></div>
+      <div class="container hero-grid hero-studio-layout">
+        <div class="hero-content studio-hero-copy">
+          <p class="hero-identity">Hiba Makhzoumi <span>/</span> Full-Stack Web Developer</p>
           <h1 id="hero-heading" class="hero-title">
-            Hi, I’m <span>Hiba Makhzoumi.</span>
+            <span class="hero-title-line">From ideas</span>
+            <span class="hero-title-line hero-title-accent">to <span class="hero-underline">reality.</span></span>
           </h1>
           <p class="hero-description">
-            I build responsive web applications and clear interfaces, working across the frontend and backend.
+            I turn thoughtful ideas into useful web experiences, bringing frontend craft and full-stack thinking together.
           </p>
-
-          <div class="hero-tech">
-            <span class="tech-pill" data-tech="html">HTML5</span>
-            <span class="tech-pill" data-tech="css">CSS3</span>
-            <span class="tech-pill" data-tech="js">JavaScript</span>
-            <span class="tech-pill" data-tech="php">PHP</span>
-            <span class="tech-pill" data-tech="laravel">Laravel</span>
-            <span class="tech-pill" data-tech="react">React</span>
-          </div>
-
           <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-            <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="btn btn-outline btn-cv">Download CV</a>
+            <a href="#projects" class="studio-button studio-button-primary">Explore My Work <span aria-hidden="true">↘</span></a>
+            <a href="#contact" class="studio-button studio-button-secondary">Let’s Talk <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-edition" aria-label="Independent web developer, based in Morocco, portfolio 2026">
+            <span>INDEPENDENT WEB DEVELOPER</span>
+            <span>BASED IN MOROCCO</span>
+            <span>PORTFOLIO / 2026</span>
           </div>
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-code-card">
-            <div class="hero-code-top">
-              <span class="hero-code-dots"><i></i><i></i><i></i></span>
-              <span>hiba.dev / profile</span>
-              <span class="hero-code-status">AVAILABLE</span>
-            </div>
-            <pre class="hero-code"><code><span class="code-line"><span class="code-number">01</span> <span class="code-keyword">const</span> hiba = {</span>
-<span class="code-line"><span class="code-number">02</span>   role: <span class="code-string">"Full-Stack Developer"</span>,</span>
-<span class="code-line"><span class="code-number">03</span>   focus: <span class="code-string">"Useful web experiences"</span>,</span>
-<span class="code-line"><span class="code-number">04</span>   tools: [<span class="code-string">"React"</span>, <span class="code-string">"Laravel"</span>]</span>
-<span class="code-line"><span class="code-number">05</span> };</span></code></pre>
-            <div class="hero-code-footer">
-              <span><i></i> OPEN TO OPPORTUNITIES</span>
-              <span>01 — 05</span>
+        <div class="hero-visual living-canvas" id="living-canvas" data-phase="alive" data-canvas-theme="paper" data-selected="type" role="region" aria-label="Interactive living interface canvas">
+          <div class="canvas-heading">
+            <span><i aria-hidden="true"></i> LIVING CANVAS</span>
+            <span class="canvas-index">STUDY 01 / 04</span>
+          </div>
+          <div class="canvas-stage">
+            <span class="canvas-coordinate canvas-coordinate-top" aria-hidden="true">GRID / 12 COL</span>
+            <span class="canvas-coordinate canvas-coordinate-bottom" aria-hidden="true">HIBA STUDIO — 2026</span>
+            <span class="canvas-crosshair canvas-crosshair-one" aria-hidden="true"></span>
+            <span class="canvas-crosshair canvas-crosshair-two" aria-hidden="true"></span>
+
+            <div class="canvas-fragment fragment-type" aria-hidden="true"><span>TYPE / 01</span><b>Ag</b></div>
+            <div class="canvas-fragment fragment-color" aria-hidden="true"><span>COLOR / 02</span><i></i><i></i><i></i></div>
+            <div class="canvas-fragment fragment-layout" aria-hidden="true"><span>LAYOUT / 03</span><i></i><i></i><i></i><i></i></div>
+            <div class="canvas-fragment fragment-spacing" aria-hidden="true"><span>SPACE / 04</span><b>24</b></div>
+
+            <div class="canvas-browser">
+              <div class="canvas-browser-bar">
+                <span class="canvas-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="canvas-address">studio / interface-study</span>
+                <span class="canvas-browser-index">01—04</span>
+              </div>
+              <div class="canvas-preview" data-canvas-part="site">
+                <div class="preview-nav" data-canvas-part="navigation">
+                  <span class="preview-wordmark">FORM<span>—</span>FIELD</span>
+                  <span class="preview-nav-label">OBJECTS FOR EVERYDAY</span>
+                  <button class="preview-menu-button" type="button" aria-label="Select the miniature navigation" data-canvas-select="navigation">MENU <span aria-hidden="true">+</span></button>
+                </div>
+                <div class="preview-content">
+                  <p class="preview-kicker" data-canvas-part="kicker"><span></span> MADE WITH INTENTION / 01</p>
+                  <button class="preview-title-button" type="button" data-canvas-select="type" aria-label="Select the miniature headline">
+                    <span class="preview-title" data-canvas-part="type">A little more<br />room to <em>think.</em></span>
+                  </button>
+                  <div class="preview-art" data-canvas-part="shape" aria-hidden="true">
+                    <span class="preview-art-ring"></span>
+                    <span class="preview-art-disc"></span>
+                    <span class="preview-art-cut"></span>
+                    <span class="preview-art-caption">FORM STUDY<br />NO. 04</span>
+                  </div>
+                  <div class="preview-bottom">
+                    <p>Objects and spaces<br />for slower moments.</p>
+                    <button class="preview-action" type="button" data-canvas-select="action">DISCOVER THE COLLECTION <span aria-hidden="true">↗</span></button>
+                  </div>
+                </div>
+                <div class="preview-footer"><span>DESIGNED TO FEEL DIFFERENT</span><span>STUDY / MOROCCO</span></div>
+              </div>
             </div>
           </div>
-          <div class="hero-visual-note"><span>FRONTEND</span><span>BACKEND</span><span>DATABASES</span></div>
+          <div class="canvas-controls">
+            <div class="canvas-control-group" role="group" aria-label="Miniature website theme">
+              <span class="canvas-control-label">THEME</span>
+              <button type="button" class="canvas-theme-button is-active" data-theme="paper" aria-pressed="true">PAPER</button>
+              <button type="button" class="canvas-theme-button" data-theme="night" aria-pressed="false">NIGHT</button>
+            </div>
+            <div class="canvas-control-group canvas-select-group" role="group" aria-label="Select a design component">
+              <span class="canvas-control-label">INSPECT</span>
+              <button type="button" class="canvas-select-button is-active" data-canvas-select="type" aria-pressed="true">TYPE</button>
+              <button type="button" class="canvas-select-button" data-canvas-select="shape" aria-pressed="false">FORM</button>
+              <button type="button" class="canvas-select-button" data-canvas-select="action" aria-pressed="false">ACTION</button>
+            </div>
+            <button type="button" class="canvas-replay" aria-label="Replay the canvas assembly">REPLAY <span aria-hidden="true">↻</span></button>
+          </div>
+          <p class="canvas-status" id="canvas-status" role="status" aria-live="polite">Selected: typography</p>
+        </div>
+        <p class="hero-scroll-cue"><span></span> SCROLL TO EXPLORE</p>
+      </div>
+    </section>
+
+    <section class="about about-editorial" id="about" aria-labelledby="about-heading">
+      <div class="about-editorial-grid" aria-hidden="true"></div>
+      <div class="container about-editorial-inner">
+        <div class="about-opening">
+          <div class="about-index-row">
+            <p class="about-index"><span>02</span> / THE PERSON</p>
+            <p class="about-coordinate">A LITTLE CONTEXT, BEYOND THE CODE</p>
+          </div>
+
+          <div class="about-title-layout">
+            <h2 class="about-heading" id="about-heading">
+              <span class="about-heading-line">BEHIND <span class="about-heading-the">THE</span></span>
+              <span class="about-heading-line about-heading-second"><span class="about-heading-accent">SCREEN</span><span class="about-heading-period">.</span></span>
+            </h2>
+
+            <figure class="about-signature" aria-label="A typography-based HM monogram on a design grid">
+              <span class="about-signature-index" aria-hidden="true">HM / 01</span>
+              <span class="about-signature-mark" aria-hidden="true">H<span>M</span></span>
+              <span class="about-signature-rule" aria-hidden="true"></span>
+              <span class="about-signature-caption" aria-hidden="true">PERSON<br />IN PROGRESS</span>
+            </figure>
+          </div>
+        </div>
+
+        <div class="about-story" role="group" aria-label="A short introduction">
+          <article class="about-chapter about-chapter-first">
+            <p class="about-chapter-index"><span>01</span><span class="about-chapter-rule"></span> WHO I AM</p>
+            <div class="about-chapter-copy">
+              <h3>Curious by nature.<br /><span>Developer by practice.</span></h3>
+              <p>I’m Hiba Makhzoumi, a full-stack web developer trained in digital development. After a two-month front-end internship, I’m continuing to grow through hands-on work across the stack.</p>
+            </div>
+          </article>
+
+          <article class="about-chapter about-chapter-second">
+            <p class="about-chapter-index"><span>02</span><span class="about-chapter-rule"></span> HOW I BUILD</p>
+            <div class="about-chapter-copy">
+              <h3>Thoughtful interfaces.<br /><span>Useful things underneath.</span></h3>
+              <p>I care about the details that make an interface feel clear and considered. I enjoy pairing frontend craft with backend features and REST APIs to build <span class="about-highlight">useful digital products</span>.</p>
+            </div>
+          </article>
+
+          <article class="about-chapter about-chapter-third">
+            <p class="about-chapter-index"><span>03</span><span class="about-chapter-rule"></span> WHAT DRIVES ME</p>
+            <div class="about-chapter-copy">
+              <h3>Keep learning.<br /><span>Make ideas work.</span></h3>
+              <p>I’m looking for opportunities to keep learning, contribute across the stack, and help turn good ideas into <span class="about-highlight">experiences people can use</span>.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="about-colophon" aria-hidden="true">
+          <span>HIBAMAKHZOUMI / FULL-STACK WEB DEVELOPER</span>
+          <span class="about-progress-track"><i></i></span>
+          <span class="about-colophon-end">A PERSON, STILL IN THE MAKING&nbsp; ↗</span>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about" aria-labelledby="about-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="about-heading" class="section-title">About Me</h2>
-          <p class="section-intro">Full-stack training and hands-on front-end internship experience.</p>
+    <section class="skills skills-playground" id="skills" aria-labelledby="skills-heading">
+      <div class="skills-intro">
+        <div class="container skills-intro-inner">
+          <div class="skills-index-row">
+            <p class="skills-index"><span>03</span> / THE TOOLKIT</p>
+            <p class="skills-coordinate">A WORKING SYSTEM / NOT A SCORECARD</p>
+          </div>
+          <div class="skills-title-layout">
+            <h2 id="skills-heading" class="skills-heading">
+              <span>TOOLS OF</span>
+              <span class="skills-heading-second">MY <i>CRAFT.</i></span>
+            </h2>
+            <p class="skills-intro-copy">A collection of technologies I use to turn ideas into functional, thoughtful digital experiences.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <p class="about-bio">
-              I hold an OFPPT Specialized Technician diploma in Full-Stack Digital Development and completed
-              a two-month front-end internship. I enjoy building responsive web applications and working
-              across frontend interfaces, backend features, and REST APIs.
-            </p>
+      <div class="container skills-system-wrap">
+        <div class="skills-system" id="skills-system" data-category="overview" data-selected-tech="">
+          <div class="skills-system-topline">
+            <p><span class="skills-live-dot" aria-hidden="true"></span> HIBA.DEV <span class="skills-topline-divider">/</span> TOOLCHAIN MAP</p>
+            <p class="skills-system-coordinate">MOROCCO <span>·</span> FULL-STACK</p>
+          </div>
 
-            <div class="about-details">
-              <div class="about-item">
-                <h4>Education</h4>
-                <p>OFPPT — Specialized Technician Diploma in Full-Stack Digital Development</p>
+          <div class="skills-explorer">
+            <nav class="skills-category-nav" role="tablist" aria-label="Technology categories">
+              <button class="skills-category-tab is-active" id="skills-tab-overview" type="button" role="tab" aria-selected="true" aria-controls="skills-workspace" tabindex="0" data-skill-category="overview">
+                <span>00</span> Overview
+              </button>
+              <button class="skills-category-tab" id="skills-tab-frontend" type="button" role="tab" aria-selected="false" aria-controls="skills-workspace" tabindex="-1" data-skill-category="frontend">
+                <span>01</span> Frontend
+              </button>
+              <button class="skills-category-tab" id="skills-tab-backend" type="button" role="tab" aria-selected="false" aria-controls="skills-workspace" tabindex="-1" data-skill-category="backend">
+                <span>02</span> Backend
+              </button>
+              <button class="skills-category-tab" id="skills-tab-databases" type="button" role="tab" aria-selected="false" aria-controls="skills-workspace" tabindex="-1" data-skill-category="databases">
+                <span>03</span> Databases
+              </button>
+              <button class="skills-category-tab" id="skills-tab-tools" type="button" role="tab" aria-selected="false" aria-controls="skills-workspace" tabindex="-1" data-skill-category="tools">
+                <span>04</span> Tools
+              </button>
+            </nav>
+
+            <div class="skills-system-body">
+              <div class="skills-network" id="skills-workspace" role="tabpanel" aria-labelledby="skills-tab-overview" tabindex="0">
+                <svg class="skills-connections" viewBox="0 0 1000 570" preserveAspectRatio="none" aria-hidden="true">
+                  <path class="skills-connection skills-connection-frontend" data-connection="frontend" d="M500 285 C420 220 335 150 220 112" />
+                  <path class="skills-connection skills-connection-backend" data-connection="backend" d="M500 285 C610 220 685 160 790 112" />
+                  <path class="skills-connection skills-connection-databases" data-connection="databases" d="M500 285 C400 360 330 420 220 462" />
+                  <path class="skills-connection skills-connection-tools" data-connection="tools" d="M500 285 C610 360 685 420 790 462" />
+                  <path class="skills-connection skills-connection-bridge" data-connection="bridge" d="M220 112 C380 45 620 45 790 112" />
+                  <path class="skills-connection skills-connection-bridge" data-connection="bridge" d="M220 462 C380 525 620 525 790 462" />
+                </svg>
+
+                <div class="skills-map-label skills-map-label-top" aria-hidden="true">INTERFACE → LOGIC → DATA</div>
+                <div class="skills-map-label skills-map-label-bottom" aria-hidden="true">CONNECTED BY THE WORK</div>
+
+                <div class="skills-core" aria-label="Hiba's development toolkit">
+                  <span class="skills-core-cross" aria-hidden="true">+</span>
+                  <strong>HIBA<span>.</span>DEV</strong>
+                  <small>IDEA / IMPLEMENTATION</small>
+                </div>
+
+                <section class="skills-cluster skills-cluster-frontend" data-skill-cluster="frontend" aria-labelledby="skills-cluster-heading-frontend">
+                  <h3 class="skills-cluster-heading" id="skills-cluster-heading-frontend"><span>01</span> FRONTEND</h3>
+                  <div class="skills-nodes">
+                    <button class="skills-tech-node" type="button" data-skill-tech="HTML5" data-skill-category="frontend" data-skill-description="Structures web content with semantic markup.">HTML5</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="CSS3" data-skill-category="frontend" data-skill-description="Styles and lays out responsive web interfaces.">CSS3</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="JavaScript" data-skill-category="frontend" data-skill-description="Adds behavior and interaction to web experiences.">JavaScript</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="React" data-skill-category="frontend" data-skill-description="Builds interfaces from reusable UI components.">React</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Responsive Web Design" data-skill-category="frontend" data-skill-description="Adapts interfaces to different screen sizes and devices.">Responsive Web Design</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Bootstrap" data-skill-category="frontend" data-skill-description="A frontend framework used to build and adapt web interfaces.">Bootstrap</button>
+                  </div>
+                </section>
+
+                <section class="skills-cluster skills-cluster-backend" data-skill-cluster="backend" aria-labelledby="skills-cluster-heading-backend">
+                  <h3 class="skills-cluster-heading" id="skills-cluster-heading-backend"><span>02</span> BACKEND</h3>
+                  <div class="skills-nodes">
+                    <button class="skills-tech-node" type="button" data-skill-tech="PHP" data-skill-category="backend" data-skill-description="Handles server-side application logic.">PHP</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Laravel" data-skill-category="backend" data-skill-description="A PHP framework for structuring web applications.">Laravel</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Object-Oriented Programming" data-skill-category="backend" data-skill-description="Organizes code around objects, responsibilities, and reusable behavior.">Object-Oriented Programming</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="REST API fundamentals" data-skill-category="backend" data-skill-description="Connects application features through REST-style endpoints.">REST API fundamentals</button>
+                  </div>
+                </section>
+
+                <section class="skills-cluster skills-cluster-databases" data-skill-cluster="databases" aria-labelledby="skills-cluster-heading-databases">
+                  <h3 class="skills-cluster-heading" id="skills-cluster-heading-databases"><span>03</span> DATABASES</h3>
+                  <div class="skills-nodes">
+                    <button class="skills-tech-node" type="button" data-skill-tech="MySQL" data-skill-category="databases" data-skill-description="A relational database system for storing structured application data.">MySQL</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="SQL" data-skill-category="databases" data-skill-description="Queries and manages data in relational databases.">SQL</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Database design" data-skill-category="databases" data-skill-description="Structures data and relationships to support application needs.">Database design</button>
+                  </div>
+                </section>
+
+                <section class="skills-cluster skills-cluster-tools" data-skill-cluster="tools" aria-labelledby="skills-cluster-heading-tools">
+                  <h3 class="skills-cluster-heading" id="skills-cluster-heading-tools"><span>04</span> TOOLS</h3>
+                  <div class="skills-nodes">
+                    <button class="skills-tech-node" type="button" data-skill-tech="Git" data-skill-category="tools" data-skill-description="Tracks code changes and supports collaborative workflows.">Git</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="GitHub" data-skill-category="tools" data-skill-description="Hosts repositories and supports code collaboration.">GitHub</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="VS Code" data-skill-category="tools" data-skill-description="A code editor used for day-to-day development.">VS Code</button>
+                    <button class="skills-tech-node" type="button" data-skill-tech="Composer" data-skill-category="tools" data-skill-description="Manages dependencies for PHP projects.">Composer</button>
+                  </div>
+                </section>
               </div>
-              <div class="about-item">
-                <h4>Technical Interests</h4>
-                <p>Frontend development, backend architecture, responsive design, REST APIs</p>
-              </div>
-              <div class="about-item">
-                <h4>Internship Experience</h4>
-                <p>Frontend Developer Intern – Two months</p>
-              </div>
-              <div class="about-item">
-                <h4>Availability</h4>
-                <p>Available for job opportunities and internships</p>
-              </div>
+
+              <aside class="skills-detail-panel" aria-live="polite" aria-atomic="true">
+                <div class="skills-detail-topline"><span class="skills-detail-indicator" aria-hidden="true"></span><span id="skills-detail-kicker">SYSTEM OVERVIEW</span></div>
+                <p class="skills-detail-index" id="skills-detail-index">00 / 04</p>
+                <h3 class="skills-detail-title" id="skills-detail-title">A connected toolkit.</h3>
+                <p class="skills-detail-copy" id="skills-detail-copy">Choose a category to explore the technologies I use across the development process. Select any technology for a closer look.</p>
+                <div class="skills-detail-footer">
+                  <span id="skills-detail-count">17 TECHNOLOGIES</span>
+                  <button class="skills-reset" type="button" aria-label="Return to toolkit overview" hidden>↶ <span>OVERVIEW</span></button>
+                </div>
+              </aside>
+            </div>
+
+            <div class="skills-system-footer" aria-hidden="true">
+              <span>SELECT A NODE TO INSPECT</span>
+              <span class="skills-system-footer-rule"></span>
+              <span>DESIGNED TO WORK TOGETHER&nbsp; ↗</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="skills" id="skills" aria-labelledby="skills-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="skills-heading" class="section-title">Skills</h2>
-          <p class="section-intro">Technologies I use across front-end, back-end, and database development.</p>
-        </div>
-
-        <div class="skills-grid">
-          <div class="skill-category">
-            <div class="skill-category-header">
-              <span class="skill-icon frontend-icon" aria-hidden="true">FE</span>
-              <h3 class="skill-category-title">Frontend</h3>
-            </div>
-            <ul class="skill-list">
-              <li><span class="tech-icon html-icon"></span>HTML5</li>
-              <li><span class="tech-icon css-icon"></span>CSS3</li>
-              <li><span class="tech-icon js-icon"></span>JavaScript</li>
-              <li><span class="tech-icon react-icon"></span>React</li>
-              <li><span class="tech-icon responsive-icon"></span>Responsive Web Design</li>
-            </ul>
+    <section class="experience experience-journey" id="experience" aria-labelledby="experience-heading">
+      <div class="journey-intro">
+        <div class="container journey-intro-inner">
+          <div class="journey-index-row">
+            <p class="journey-index"><span>04</span> / THE JOURNEY</p>
+            <p class="journey-coordinate">CHAPTERS OF MY STORY</p>
           </div>
-
-          <div class="skill-category">
-            <div class="skill-category-header">
-              <span class="skill-icon backend-icon" aria-hidden="true">BE</span>
-              <h3 class="skill-category-title">Backend</h3>
-            </div>
-            <ul class="skill-list">
-              <li><span class="tech-icon php-icon"></span>PHP</li>
-              <li><span class="tech-icon laravel-icon"></span>Laravel</li>
-              <li><span class="tech-icon oop-icon"></span>Object-Oriented Programming</li>
-              <li><span class="tech-icon api-icon"></span>REST API fundamentals</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-category-header">
-              <span class="skill-icon db-icon" aria-hidden="true">DB</span>
-              <h3 class="skill-category-title">Databases</h3>
-            </div>
-            <ul class="skill-list">
-              <li><span class="tech-icon mysql-icon"></span>MySQL</li>
-              <li><span class="tech-icon sql-icon"></span>SQL</li>
-              <li><span class="tech-icon dbdesign-icon"></span>Database design</li>
-            </ul>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-category-header">
-              <span class="skill-icon tools-icon" aria-hidden="true">TL</span>
-              <h3 class="skill-category-title">Tools</h3>
-            </div>
-            <ul class="skill-list">
-              <li><span class="tech-icon git-icon"></span>Git</li>
-              <li><span class="tech-icon github-icon"></span>GitHub</li>
-              <li><span class="tech-icon vscode-icon"></span>VS Code</li>
-              <li><span class="tech-icon composer-icon"></span>Composer</li>
-            </ul>
+          <div class="journey-title-layout">
+            <h2 class="journey-heading" id="experience-heading">
+              <span>EVERY STEP</span>
+              <span>BUILDS <i>SOMETHING.</i></span>
+            </h2>
+            <p class="journey-intro-copy">My work so far brings together front-end development, an administrative internship, and hands-on sales and retail experience.</p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="experience" id="experience" aria-labelledby="experience-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="experience-heading" class="section-title">Experience</h2>
-          <p class="section-intro">Front-end development experience, alongside customer-facing and independent sales work.</p>
-        </div>
+      <div class="container journey-layout" id="journey-layout">
+        <aside class="journey-identity" aria-label="Current chapter">
+          <div class="journey-identity-sticky">
+            <div class="journey-current-index">
+              <span>CHAPTER</span>
+              <span class="journey-current-count" id="journey-current-count">01 <i>/ 06</i></span>
+            </div>
+            <p class="journey-current-year" id="journey-current-year">2026</p>
+            <p class="journey-current-title" id="journey-current-title" aria-live="polite" aria-atomic="true">Front-End Developer Intern</p>
+            <div class="journey-progress-wrap">
+              <div class="journey-progress-track" aria-hidden="true"><span id="journey-progress-fill"></span></div>
+              <progress class="journey-progress-semantic" id="journey-progress" max="6" value="1" aria-label="Professional journey progress" aria-valuetext="Chapter 1 of 6">1 of 6</progress>
+              <span class="journey-progress-caption" id="journey-progress-caption">01 — 06</span>
+            </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Internship</span>
-              <h3 class="timeline-position">Front-End Developer Intern</h3>
-              <p class="timeline-company">Boston English Center</p>
-              <p class="timeline-duration">2 months <span class="timeline-dot">|</span> 2026</p>
-              <ul class="timeline-responsibilities">
+            <nav class="journey-nav" aria-label="Navigate experience chapters">
+              <a href="#journey-chapter-1" class="is-active" aria-current="step" data-journey-link="0"><span>01</span> Development</a>
+              <a href="#journey-chapter-2" data-journey-link="1"><span>02</span> Administration</a>
+              <a href="#journey-chapter-3" data-journey-link="2"><span>03</span> Clothing sales</a>
+              <a href="#journey-chapter-4" data-journey-link="3"><span>04</span> Honey sales</a>
+              <a href="#journey-chapter-5" data-journey-link="4"><span>05</span> Electronics</a>
+              <a href="#journey-chapter-6" data-journey-link="5"><span>06</span> Bookstore</a>
+            </nav>
+          </div>
+        </aside>
+
+        <div class="journey-chapters">
+          <article class="journey-chapter journey-chapter-featured is-active" id="journey-chapter-1" data-journey-chapter data-journey-number="01" data-journey-year="2026" data-journey-title="Front-End Developer Intern" aria-labelledby="journey-title-1">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">01 <i>/ 06</i></span>
+              <span class="journey-featured-label"><span aria-hidden="true">✳</span> DEVELOPMENT CHAPTER</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">INTERNSHIP <span>·</span> FRONT-END DEVELOPMENT</p>
+              <h3 class="journey-chapter-title" id="journey-title-1">Front-End<br /><em>Developer Intern</em></h3>
+              <p class="journey-chapter-organization">Boston English Center</p>
+              <p class="journey-chapter-date"><time datetime="2026">2 months <span>·</span> 2026</time></p>
+              <p class="journey-chapter-summary">A first professional chapter in web development: building interfaces from mockups and adapting them for responsive display.</p>
+              <ul class="journey-responsibilities">
                 <li>Developed and improved web interfaces using HTML, CSS, JavaScript, and Bootstrap.</li>
                 <li>Turned web mockups into pages that met project requirements.</li>
                 <li>Adapted interfaces for responsive display across devices.</li>
                 <li>Collaborated with the team to deliver and improve web projects.</li>
               </ul>
+              <div class="journey-technologies" aria-label="Technologies used">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span>
+              </div>
             </div>
-          </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">FOUNDATION / 01</span>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Internship</span>
-              <h3 class="timeline-position">Administrative Intern</h3>
-              <p class="timeline-company">Commercial Court</p>
-              <p class="timeline-duration">2026</p>
-              <ul class="timeline-responsibilities">
+          <article class="journey-chapter journey-chapter-supporting" id="journey-chapter-2" data-journey-chapter data-journey-number="02" data-journey-year="2026" data-journey-title="Administrative Intern" aria-labelledby="journey-title-2">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">02 <i>/ 06</i></span>
+              <span class="journey-chapter-type-label">ADMINISTRATION</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">INTERNSHIP <span>·</span> COMMERCIAL COURT</p>
+              <h3 class="journey-chapter-title" id="journey-title-2">Administrative<br /><em>Intern</em></h3>
+              <p class="journey-chapter-organization">Commercial Court</p>
+              <p class="journey-chapter-date"><time datetime="2026">2026</time></p>
+              <ul class="journey-responsibilities">
                 <li>Observed administrative procedures and case file management.</li>
               </ul>
             </div>
-          </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">PRACTICE / 02</span>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Sales</span>
-              <h3 class="timeline-position">Clothing Sales</h3>
-              <ul class="timeline-responsibilities">
+          <article class="journey-chapter journey-chapter-supporting" id="journey-chapter-3" data-journey-chapter data-journey-number="03" data-journey-year="DATE NOT LISTED" data-journey-title="Clothing Sales" aria-labelledby="journey-title-3">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">03 <i>/ 06</i></span>
+              <span class="journey-chapter-type-label">SALES</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">COMMERCIAL EXPERIENCE</p>
+              <h3 class="journey-chapter-title" id="journey-title-3">Clothing<br /><em>Sales</em></h3>
+            
+              <ul class="journey-responsibilities">
                 <li>Bought and sold clothing, assisted customers, and managed orders and sales.</li>
               </ul>
             </div>
-          </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">PRACTICE / 03</span>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Sales</span>
-              <h3 class="timeline-position">Honey Sales</h3>
-              <ul class="timeline-responsibilities">
+          <article class="journey-chapter journey-chapter-supporting" id="journey-chapter-4" data-journey-chapter data-journey-number="04" data-journey-year="DATE NOT LISTED" data-journey-title="Honey Sales" aria-labelledby="journey-title-4">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">04 <i>/ 06</i></span>
+              <span class="journey-chapter-type-label">SALES</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">COMMERCIAL EXPERIENCE</p>
+              <h3 class="journey-chapter-title" id="journey-title-4">Honey<br /><em>Sales</em></h3>
+              
+              <ul class="journey-responsibilities">
                 <li>Sold honey and managed day-to-day sales operations.</li>
                 <li>Welcomed customers and helped them choose products.</li>
               </ul>
             </div>
-          </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">PRACTICE / 04</span>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Independent Sales</span>
-              <h3 class="timeline-position">Independent Electronics Sales</h3>
-              <ul class="timeline-responsibilities">
+          <article class="journey-chapter journey-chapter-supporting" id="journey-chapter-5" data-journey-chapter data-journey-number="05" data-journey-year="DATE NOT LISTED" data-journey-title="Independent Electronics Sales" aria-labelledby="journey-title-5">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">05 <i>/ 06</i></span>
+              <span class="journey-chapter-type-label">INDEPENDENT SALES</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">COMMERCIAL EXPERIENCE</p>
+              <h3 class="journey-chapter-title" id="journey-title-5">Independent<br /><em>Electronics Sales</em></h3>
+           
+              <ul class="journey-responsibilities">
                 <li>Bought and sold electronic products and managed customer relationships and sales independently.</li>
               </ul>
             </div>
-          </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">PRACTICE / 05</span>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <span class="timeline-type">Retail</span>
-              <h3 class="timeline-position">Bookstore and Stationery Assistant</h3>
-              <ul class="timeline-responsibilities">
+          <article class="journey-chapter journey-chapter-supporting" id="journey-chapter-6" data-journey-chapter data-journey-number="06" data-journey-year="DATE NOT LISTED" data-journey-title="Bookstore and Stationery Assistant" aria-labelledby="journey-title-6">
+            <div class="journey-chapter-topline">
+              <span class="journey-chapter-number">06 <i>/ 06</i></span>
+              <span class="journey-chapter-type-label">RETAIL</span>
+            </div>
+            <div class="journey-chapter-content">
+              <p class="journey-chapter-type">RETAIL EXPERIENCE</p>
+              <h3 class="journey-chapter-title" id="journey-title-6">Bookstore &amp;<br /><em>Stationery Assistant</em></h3>
+           
+              <ul class="journey-responsibilities">
                 <li>Assisted customers, sold stationery, and organized products.</li>
               </ul>
             </div>
+            <span class="journey-chapter-endnote" aria-hidden="true">IN PROGRESS / 06</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects digital-showroom" id="projects" aria-labelledby="projects-heading">
+      <div class="container showroom-container">
+        <header class="showroom-intro">
+          <div class="showroom-index-row">
+            <p class="showroom-index"><span>05</span> / SELECTED WORK</p>
+            <p class="showroom-edition">SELECTED PROJECTS / DIGITAL EXPERIENCES</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="projects-heading" class="section-title">Featured Projects</h2>
-          <p class="section-intro">A selection of web projects, with verified live and source links.</p>
-        </div>
-
-        <div class="project-filters" role="group" aria-label="Filter projects by category">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
-          <button class="filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
-          <button class="filter-btn" data-filter="fullstack" aria-pressed="false">Full Stack</button>
-        </div>
-
-        <div class="project-grid" id="project-grid">
-          <article class="project-card" data-category="fullstack">
-            <div class="project-image">
-              <a href="https://www.amanartourism.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the Amanar Tourism website">
-                <img src="https://images.pexels.com/photos/36579415/pexels-photo-36579415.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1024&amp;q=82" alt="Sunset over the rocky landscape featured on Amanar Tourism" class="project-img" width="1024" height="682" loading="lazy" decoding="async" />
-              </a>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Amanar Tourism</h3>
-              <p class="project-description">
-                A tourism website concept for presenting travel experiences and managing reservation requests.
-              </p>
-              <div class="project-tech">
-                <span>Laravel</span>
-                <span>React</span>
-                <span>Vite</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://www.amanartourism.com/" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Live Website</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="frontend">
-            <div class="project-image">
-              <a href="https://makhzoumihiba00-ops.github.io/remtoo-landing/index.html" target="_blank" rel="noopener noreferrer" aria-label="Visit the Remtoo live demo">
-                <img src="https://makhzoumihiba00-ops.github.io/remtoo-landing/assets/images/classroom.jpg" alt="Teacher helping students work together in a classroom" class="project-img" width="1100" height="733" loading="lazy" decoding="async" />
-              </a>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Remtoo</h3>
-              <p class="project-description">
-                A complete, ready-to-teach English curriculum with lessons, videos, activities, and assessments
-                from A1 to C1.
-              </p>
-              <div class="project-tech" aria-label="Technologies used">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div class="project-actions">
-                <a href="https://makhzoumihiba00-ops.github.io/remtoo-landing/index.html" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="https://github.com/makhzoumihiba00-ops/remtoo-landing" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://makhzoumihiba00-ops.github.io/remtoo-landing/curriculum.html" class="btn btn-outline btn-sm" target="_blank" rel="noopener noreferrer">View Curriculum</a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="education" id="education" aria-labelledby="education-heading">
-      <div class="container">
-        <div class="education-heading-row">
-          <div>
-            <p class="education-kicker"><span aria-hidden="true"></span> A FOUNDATION FOR WHAT'S NEXT</p>
-            <h2 id="education-heading" class="education-title">My Learning <span>Journey</span></h2>
-          </div>
-          <p class="education-intro">
-            Full-stack development training followed by current studies in web marketing.
-          </p>
-        </div>
-
-        <div class="education-journey" aria-label="Education and learning timeline">
-          <article class="education-entry education-entry-featured education-card">
-            <div class="education-date">
-              <span class="education-date-index">01 <span>/ 02</span></span>
-              <time class="education-period" datetime="2025">2025 <span>—</span> 2026</time>
-            </div>
-            <div class="education-entry-content">
-              <div class="education-entry-topline">
-                <span class="education-entry-category">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>
-                  ACADEMIC ACHIEVEMENT
-                </span>
-                <span class="education-entry-code">EDU.01</span>
-              </div>
-              <h3 class="education-institution">OFPPT</h3>
-              <p class="education-diploma">Specialized Technician Diploma in Full-Stack Digital Development</p>
-              <p class="education-description">
-                Specialized training in frontend and backend development, database management, responsive web applications, and full-stack development practices.
-              </p>
-              <div class="education-focus" aria-label="Areas of study">
-                <span>Frontend</span>
-                <span>Backend</span>
-                <span>Databases</span>
-                <span>Full stack</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="education-entry education-entry-current education-card">
-            <div class="education-date">
-              <span class="education-date-index">02 <span>/ 02</span></span>
-              <time class="education-period" datetime="2026">2026 <span>—</span> 2027</time>
-            </div>
-            <div class="education-entry-content">
-              <div class="education-entry-topline">
-                <span class="education-entry-category">
-                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M7 15l4-4 3 2 5-6"/><path d="M15 7h4v4"/></svg>
-                  CONTINUING EDUCATION
-                </span>
-                <span class="education-current"><span aria-hidden="true"></span> CURRENTLY LEARNING</span>
-              </div>
-              <h3 class="education-institution">Web Marketing</h3>
-              <p class="education-diploma">A new perspective on the digital landscape</p>
-              <p class="education-description">
-                Currently developing knowledge of digital marketing, online communication, and digital strategy.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <p class="contact-eyebrow"><span aria-hidden="true"></span> LET'S TALK</p>
-            <h2 id="contact-heading" class="contact-heading">
-              Let’s talk<br />about <span>what’s next.</span>
+          <div class="showroom-heading-row">
+            <h2 class="showroom-heading" id="projects-heading">
+              <span>MADE TO</span>
+              <span><i>MATTER.</i></span>
             </h2>
-            <p class="contact-intro">
-              Open to meaningful opportunities, ambitious teams, and thoughtful collaborations.
-              Have something in mind? I’d love to hear about it.
-            </p>
-
-            <div class="availability-badge">
-              <span class="availability-indicator" aria-hidden="true"></span>
-              Available for opportunities.
-            </div>
-
-            <div class="contact-links" aria-label="Contact links">
-              <a href="mailto:makhzoumihibz00@gmail.com" class="contact-link">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M4 6.5h16v11H4z"/><path d="m4.5 7 7.5 6 7.5-6"/></svg>
-                </span>
-                <span class="contact-link-copy">
-                  <span class="contact-label">EMAIL</span>
-                  <span class="contact-value">makhzoumihibz00@gmail.com</span>
-                </span>
-                <span class="contact-link-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a href="tel:+212605033533" class="contact-link">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M7.2 3.8h2.5l1.2 4.1-1.8 1.8a14 14 0 0 0 5.2 5.2l1.8-1.8 4.1 1.2v2.5a2 2 0 0 1-2.2 2A15.9 15.9 0 0 1 5.2 6a2 2 0 0 1 2-2.2Z"/></svg>
-                </span>
-                <span class="contact-link-copy">
-                  <span class="contact-label">PHONE</span>
-                  <span class="contact-value">+212 605033533</span>
-                </span>
-                <span class="contact-link-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a href="https://www.linkedin.com/in/makhzoumi-hiba/" class="contact-link" target="_blank" rel="noopener noreferrer">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M7 9v8M7 6.5v.1M11 17v-4.3a3.2 3.2 0 0 1 6.4 0V17M11 10v7"/><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/></svg>
-                </span>
-                <span class="contact-link-copy">
-                  <span class="contact-label">LINKEDIN</span>
-                  <span class="contact-value">linkedin.com/in/makhzoumi-hiba</span>
-                </span>
-                <span class="contact-link-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a href="https://github.com/makhzoumihiba00-ops" class="contact-link" target="_blank" rel="noopener noreferrer">
-                <span class="contact-link-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M9 19c-4.2 1.3-4.2-2.1-5.9-2.5M15 21v-3.3a2.9 2.9 0 0 0-.8-2.2c2.7-.3 5.5-1.3 5.5-6a4.7 4.7 0 0 0-1.3-3.3 4.4 4.4 0 0 0-.1-3.3s-1-.3-3.3 1.3a11.4 11.4 0 0 0-6 0C6.7 2.6 5.7 2.9 5.7 2.9a4.4 4.4 0 0 0-.1 3.3 4.7 4.7 0 0 0-1.3 3.3c0 4.7 2.8 5.7 5.5 6A2.9 2.9 0 0 0 9 17.7V21"/></svg>
-                </span>
-                <span class="contact-link-copy">
-                  <span class="contact-label">GITHUB</span>
-                  <span class="contact-value">github.com/makhzoumihiba00-ops</span>
-                </span>
-                <span class="contact-link-arrow" aria-hidden="true">↗</span>
-              </a>
-            </div>
-
-            <div class="contact-location">
-              <span class="contact-location-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/></svg>
-              </span>
-              <span><span class="contact-label">BASED IN</span><span class="contact-value">Morocco</span></span>
+            <div class="showroom-intro-aside">
+              <p>A selection of digital experiences I've built, combining thoughtful design with practical development.</p>
+              <p class="showroom-counter-label">CURRENT EXHIBIT</p>
+              <output class="showroom-counter" id="showroom-counter" aria-label="Current project">01 <i>—</i> 02</output>
             </div>
           </div>
+        </header>
 
-          <div class="contact-form-wrapper">
-            <div class="form-card-top">
-              <span class="form-card-label">A GOOD PLACE TO START</span>
-              <span class="form-card-index" aria-hidden="true">01 — 04</span>
+        <nav class="showroom-index" aria-label="Navigate selected projects">
+          <a href="#project-amanar" data-showroom-link="amanar" aria-current="step"><span>01</span> AMANAR</a>
+          <a href="#project-remtoo" data-showroom-link="remtoo"><span>02</span> REMTOO</a>
+          <span class="showroom-index-rule" aria-hidden="true"></span>
+          <span class="showroom-index-total" id="showroom-index-total">02 / 02</span>
+        </nav>
+
+        <div class="showroom-gallery" id="project-grid">
+          <article class="showcase-project showcase-project-amanar is-visible" id="project-amanar" data-showcase-project data-project-key="amanar" aria-labelledby="project-title-amanar">
+            <div class="showcase-project-topline">
+              <span class="showcase-project-number">01 <i>/ 02</i></span>
+              <span class="showcase-project-category">FULL-STACK / TOURISM</span>
             </div>
-            <h3 class="form-card-heading">Tell me what’s on your mind.</h3>
-            <p class="form-card-intro">Share a few details and I’ll be glad to connect.</p>
+            <div class="showcase-project-grid">
+              <figure class="showcase-visual">
+                <button class="showcase-stage" type="button" data-project-open="amanar" aria-label="Explore the Amanar Tourism case study" aria-haspopup="dialog" aria-controls="project-detail-dialog">
+                  <img src="https://images.pexels.com/photos/36579415/pexels-photo-36579415.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1440&amp;q=82" alt="Golden sunset over the rocky landscape featured on the Amanar Tourism website" width="1440" height="960" loading="lazy" decoding="async" />
+                  <span class="showcase-stage-index">AM / 01</span>
+                  <span class="showcase-explore-pointer" aria-hidden="true">EXPLORE <b>↗</b></span>
+                  <span class="showcase-stage-note">LIVE SITE IMAGE <i>·</i> SCREEN CAPTURE NEEDED</span>
+                </button>
+                <figcaption class="showcase-visual-caption">
+                  <span>LANDSCAPE / PROJECT IMAGE</span>
+                  <span>01 — MOROCCO</span>
+                </figcaption>
+              </figure>
 
-            <form id="contact-form" novalidate>
-              <div class="form-fields">
-                <div class="form-group">
-                  <label for="contact-name">Full Name <span class="required">*</span></label>
-                  <input type="text" id="contact-name" name="name" autocomplete="name" required maxlength="100" aria-describedby="error-contact-name" />
-                  <span class="error-message" id="error-contact-name" aria-live="polite"></span>
+              <div class="showcase-project-copy">
+                <p class="showcase-project-kicker">01 / A JOURNEY, WELL TOLD</p>
+                <h3 class="showcase-project-title" id="project-title-amanar">AMANAR</h3>
+                <p class="showcase-project-description">A tourism website concept for presenting travel experiences and managing reservation requests.</p>
+                <div class="showcase-project-tech" aria-label="Technologies used">
+                  <span>Laravel</span><span>React</span><span>Vite</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
                 </div>
-
-                <div class="form-group">
-                  <label for="contact-email">Email Address <span class="required">*</span></label>
-                  <input type="email" id="contact-email" name="email" autocomplete="email" required maxlength="200" aria-describedby="error-contact-email" />
-                  <span class="error-message" id="error-contact-email" aria-live="polite"></span>
+                <div class="showcase-project-actions">
+                  <a class="showcase-action showcase-action-primary" href="https://www.amanartourism.com/" target="_blank" rel="noopener noreferrer">Visit live website <span aria-hidden="true">↗</span></a>
+                  <button class="showcase-action showcase-action-text" type="button" data-project-open="amanar" aria-haspopup="dialog" aria-controls="project-detail-dialog">Explore case study <span aria-hidden="true">＋</span></button>
                 </div>
+                <p class="showcase-project-footnote">The original site imagery is shown here. A captured interface screenshot is still needed.</p>
+              </div>
+            </div>
+          </article>
 
-                <div class="form-group">
-                  <label for="contact-subject">Subject <span class="required">*</span></label>
-                  <input type="text" id="contact-subject" name="subject" required maxlength="200" aria-describedby="error-contact-subject" />
-                  <span class="error-message" id="error-contact-subject" aria-live="polite"></span>
+          <article class="showcase-project showcase-project-remtoo" id="project-remtoo" data-showcase-project data-project-key="remtoo" aria-labelledby="project-title-remtoo">
+            <div class="showcase-project-topline">
+              <span class="showcase-project-number">02 <i>/ 02</i></span>
+              <span class="showcase-project-category">FRONT-END / EDUCATION</span>
+            </div>
+            <div class="showcase-project-grid">
+              <figure class="showcase-visual">
+                <button class="showcase-stage" type="button" data-project-open="remtoo" aria-label="Explore the Remtoo case study" aria-haspopup="dialog" aria-controls="project-detail-dialog">
+                  <img src="https://makhzoumihiba00-ops.github.io/remtoo-landing/assets/images/classroom.jpg" alt="Classroom image used on the Remtoo educational platform" width="1100" height="733" loading="lazy" decoding="async" />
+                  <span class="showcase-stage-index">RM / 02</span>
+                  <span class="showcase-explore-pointer" aria-hidden="true">EXPLORE <b>↗</b></span>
+                  <span class="showcase-stage-note">LIVE SITE IMAGE <i>·</i> SCREEN CAPTURE NEEDED</span>
+                </button>
+                <figcaption class="showcase-visual-caption">
+                  <span>CLASSROOM / PROJECT IMAGE</span>
+                  <span>02 — A1 TO C1</span>
+                </figcaption>
+              </figure>
+
+              <div class="showcase-project-copy">
+                <p class="showcase-project-kicker">02 / LEARNING, ORGANIZED</p>
+                <h3 class="showcase-project-title" id="project-title-remtoo">REMTOO</h3>
+                <p class="showcase-project-description">A complete, ready-to-teach English curriculum with lessons, videos, activities, and assessments from A1 to C1.</p>
+                <div class="showcase-project-tech" aria-label="Technologies used">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span>
                 </div>
+                <div class="showcase-project-actions">
+                  <a class="showcase-action showcase-action-primary" href="https://makhzoumihiba00-ops.github.io/remtoo-landing/index.html" target="_blank" rel="noopener noreferrer">Visit live demo <span aria-hidden="true">↗</span></a>
+                  <a class="showcase-action showcase-action-secondary" href="https://github.com/makhzoumihiba00-ops/remtoo-landing" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                  <button class="showcase-action showcase-action-text" type="button" data-project-open="remtoo" aria-haspopup="dialog" aria-controls="project-detail-dialog">Explore case study <span aria-hidden="true">＋</span></button>
+                </div>
+                <p class="showcase-project-footnote">The original site imagery is shown here. A captured interface screenshot is still needed.</p>
+              </div>
+            </div>
+          </article>
+        </div>
 
-                <div class="form-group form-group-message">
-                  <label for="contact-message">Message <span class="required">*</span></label>
-                  <textarea id="contact-message" name="message" required rows="4" maxlength="1000" aria-describedby="error-contact-message"></textarea>
-                  <span class="error-message" id="error-contact-message" aria-live="polite"></span>
+        <dialog class="project-detail-dialog" id="project-detail-dialog" aria-labelledby="project-detail-title">
+          <div class="project-detail-shell">
+            <button class="project-detail-close" type="button" data-project-close aria-label="Close project case study"><span aria-hidden="true">×</span> CLOSE</button>
+            <div class="project-detail-content"></div>
+          </div>
+        </dialog>
+
+        <template id="project-detail-amanar">
+          <article class="project-case">
+            <header class="project-case-heading">
+              <p class="project-case-index">01 / FULL-STACK TOURISM WEBSITE</p>
+              <h3 class="project-case-title" id="project-detail-title">AMANAR</h3>
+              <p class="project-case-summary">A tourism website concept for presenting travel experiences and managing reservation requests.</p>
+            </header>
+            <div class="project-case-facts">
+              <section>
+                <p class="project-case-label">THE PROJECT</p>
+                <h4>Experiences around Marrakech</h4>
+                <p>A tourism website presenting local experiences and giving visitors a way to send reservation requests. The live site explains that requests are confirmed with the team rather than through a live availability search.</p>
+              </section>
+              <section>
+                <p class="project-case-label">VERIFIED STACK</p>
+                <div class="showcase-project-tech"><span>Laravel</span><span>React</span><span>Vite</span><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              </section>
+            </div>
+            <figure class="project-case-visual">
+              <img src="https://images.pexels.com/photos/36579415/pexels-photo-36579415.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1440&amp;q=82" alt="Golden sunset over the rocky landscape featured on the Amanar Tourism website" width="1440" height="960" loading="lazy" decoding="async" />
+              <figcaption>Original live-site imagery — an interface screenshot is not yet available.</figcaption>
+            </figure>
+            <div class="project-case-actions">
+              <a class="showcase-action showcase-action-primary" href="https://www.amanartourism.com/" target="_blank" rel="noopener noreferrer">Visit live website <span aria-hidden="true">↗</span></a>
+              <button class="showcase-action showcase-action-secondary" type="button" data-project-close>Back to projects</button>
+            </div>
+          </article>
+        </template>
+
+        <template id="project-detail-remtoo">
+          <article class="project-case">
+            <header class="project-case-heading">
+              <p class="project-case-index">02 / FRONT-END EDUCATION PLATFORM</p>
+              <h3 class="project-case-title" id="project-detail-title">REMTOO</h3>
+              <p class="project-case-summary">A complete, ready-to-teach English curriculum with lessons, videos, activities, and assessments from A1 to C1.</p>
+            </header>
+            <div class="project-case-facts">
+              <section>
+                <p class="project-case-label">THE PROJECT</p>
+                <h4>A curriculum in one place</h4>
+                <p>Remtoo organizes English-learning content from A1 to C1, including lessons, videos, activities, and assessments. The project includes a public curriculum page.</p>
+              </section>
+              <section>
+                <p class="project-case-label">VERIFIED STACK</p>
+                <div class="showcase-project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              </section>
+            </div>
+            <figure class="project-case-visual">
+              <img src="https://makhzoumihiba00-ops.github.io/remtoo-landing/assets/images/classroom.jpg" alt="Classroom image used on the Remtoo educational platform" width="1100" height="733" loading="lazy" decoding="async" />
+              <figcaption>Original live-site imagery — an interface screenshot is not yet available.</figcaption>
+            </figure>
+            <div class="project-case-actions">
+              <a class="showcase-action showcase-action-primary" href="https://makhzoumihiba00-ops.github.io/remtoo-landing/index.html" target="_blank" rel="noopener noreferrer">Visit live demo <span aria-hidden="true">↗</span></a>
+              <a class="showcase-action showcase-action-secondary" href="https://github.com/makhzoumihiba00-ops/remtoo-landing" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a>
+              <a class="showcase-action showcase-action-secondary" href="https://makhzoumihiba00-ops.github.io/remtoo-landing/curriculum.html" target="_blank" rel="noopener noreferrer">View curriculum <span aria-hidden="true">↗</span></a>
+              <button class="showcase-action showcase-action-text" type="button" data-project-close>Back to projects</button>
+            </div>
+          </article>
+        </template>
+      </div>
+    </section>
+
+    <section class="education education-archive" id="education" aria-labelledby="education-heading">
+      <div class="container education-archive-container">
+        <div class="education-archive-layout">
+          <header class="education-archive-intro">
+            <div class="education-archive-index-row">
+              <p class="education-archive-kicker"><span>06</span> / EDUCATION</p>
+              <span class="education-archive-edition">THE LEARNING ARCHIVE</span>
+            </div>
+            <h2 class="education-archive-heading" id="education-heading">
+              <span>ALWAYS</span>
+              <span>IN <i>PROGRESS.</i></span>
+            </h2>
+            <p class="education-archive-copy">Learning, experimenting, and continuously expanding the skills behind my work.</p>
+            <div class="education-archive-colophon">
+              <span class="education-archive-status"><i aria-hidden="true"></i> ALWAYS IN PROGRESS</span>
+              <span>2 RECORDS / 2025—2027</span>
+            </div>
+            <div class="education-archive-index" aria-label="Select an education record">
+              <span class="education-archive-index-title">RECORD INDEX</span>
+              <button class="education-index-button is-active" type="button" data-education-index="0" aria-controls="education-record-1" aria-current="true">
+                <span class="education-index-number">01</span><span class="education-index-line" aria-hidden="true"></span><span class="education-index-label">DEVELOPMENT</span>
+              </button>
+              <button class="education-index-button" type="button" data-education-index="1" aria-controls="education-record-2">
+                <span class="education-index-number">02</span><span class="education-index-line" aria-hidden="true"></span><span class="education-index-label">WEB MARKETING</span>
+              </button>
+            </div>
+          </header>
+
+          <div class="education-archive-records" aria-label="Education and ongoing learning">
+            <details class="education-record education-record-featured" id="education-record-1" data-education-record open>
+              <summary class="education-record-summary" aria-controls="education-detail-1" aria-expanded="true">
+                <span class="education-record-meta">
+                  <span class="education-record-number">01 <i>/ 02</i></span>
+                  <span class="education-record-state">FORMATION</span>
+                  <span class="education-record-date"><time datetime="2025">2025</time> <i>—</i> <time datetime="2026">2026</time></span>
+                </span>
+                <span class="education-record-heading">
+                  <span class="education-record-institution">OFPPT</span>
+                  <span class="education-record-title">Specialized Technician Diploma in Full-Stack Digital Development</span>
+                </span>
+                <span class="education-record-toggle" aria-hidden="true"><i></i></span>
+              </summary>
+              <div class="education-record-panel" id="education-detail-1">
+                <div class="education-record-panel-inner">
+                  <p class="education-record-description">Specialized training in frontend and backend development, database management, responsive web applications, and full-stack development practices.</p>
+                  <div class="education-record-focus" aria-label="Areas of study">
+                    <span>Frontend</span><span>Backend</span><span>Databases</span><span>Full stack</span>
+                  </div>
+                  <p class="education-record-note">FULL-STACK DIGITAL DEVELOPMENT <span>·</span> OFPPT</p>
                 </div>
               </div>
+            </details>
 
-              <p class="form-note">
-                <span class="form-note-icon" aria-hidden="true">i</span>
-                Send Message opens your email app with a draft addressed to makhzoumihibz00@gmail.com. Review it and press Send to deliver.
-              </p>
-
-              <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
-              <button type="submit" class="btn btn-primary btn-submit">
-                <span>Send Message</span>
-                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </button>
-            </form>
+            <details class="education-record education-record-ongoing" id="education-record-2" data-education-record>
+              <summary class="education-record-summary" aria-controls="education-detail-2" aria-expanded="false">
+                <span class="education-record-meta">
+                  <span class="education-record-number">02 <i>/ 02</i></span>
+                  <span class="education-record-state">CURRENT STUDY</span>
+                  <span class="education-record-date"><time datetime="2026">2026</time> <i>—</i> <time datetime="2027">2027</time></span>
+                </span>
+                <span class="education-record-heading">
+                  <span class="education-record-institution">Web Marketing</span>
+                  <span class="education-record-title">A new perspective on the digital landscape</span>
+                </span>
+                <span class="education-record-toggle" aria-hidden="true"><i></i></span>
+              </summary>
+              <div class="education-record-panel" id="education-detail-2" hidden>
+                <div class="education-record-panel-inner">
+                  <p class="education-record-description">Currently developing knowledge of digital marketing, online communication, and digital strategy.</p>
+                  <p class="education-record-status"><span aria-hidden="true"></span> CURRENTLY LEARNING</p>
+                  <p class="education-record-note">CONTINUING EDUCATION <span>·</span> 2026—2027</p>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="contact final-connection" id="contact" aria-labelledby="contact-heading">
+      <div class="container final-connection-container">
+        <div class="final-connection-topline">
+          <p class="final-connection-index"><span>07</span> / THE FINAL CONNECTION</p>
+          <p class="final-connection-coordinate">MOROCCO <i>·</i> AVAILABLE BY EMAIL</p>
+        </div>
+
+        <div class="final-connection-content">
+          <h2 class="final-connection-question" id="contact-heading">
+            <span>HAVE AN</span>
+            <span><i>IDEA?</i></span>
+          </h2>
+          <p class="final-connection-intro">Thoughtful ideas deserve a real conversation. Tell me what you’re imagining.</p>
+          <button class="final-connection-trigger" id="open-contact-panel" type="button" aria-haspopup="dialog" aria-controls="contact-panel" aria-expanded="false">
+            <span class="final-trigger-line"><span>LET’S MAKE</span></span>
+            <span class="final-trigger-line"><span>IT REAL.</span><i class="final-trigger-arrow" aria-hidden="true">↗</i></span>
+            <span class="final-trigger-marker" aria-hidden="true">OPEN THE CONNECTION</span>
+          </button>
+          <p class="final-connection-caption"><span>AN OPEN INVITATION</span><span>SCROLL, SAY HELLO, OR START WITH AN EMAIL</span></p>
+        </div>
+
+        <dialog class="contact-panel" id="contact-panel" aria-labelledby="contact-panel-heading">
+          <div class="contact-panel-shell">
+            <div class="contact-panel-topline">
+              <p><span>07</span> / START A CONVERSATION</p>
+              <button class="contact-panel-close" type="button" aria-label="Close contact panel"><span aria-hidden="true">×</span> CLOSE</button>
+            </div>
+            <div class="contact-panel-layout">
+              <div class="contact-panel-aside">
+                <p class="contact-panel-kicker">THE DIRECT ROUTE</p>
+                <h3 id="contact-panel-heading" tabindex="-1">Let’s find a good place to begin.</h3>
+                <p class="contact-panel-description">Choose a contact route, or write a note and open it as a draft in your email app.</p>
+                <nav class="contact-link-list" aria-label="Contact and profile links">
+                  <a href="mailto:makhzoumihibz00@gmail.com" class="contact-editorial-link">
+                    <span class="contact-link-index">01</span><span class="contact-link-name">EMAIL</span><span class="contact-link-detail">makhzoumihibz00@gmail.com</span><span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a href="tel:+212605033533" class="contact-editorial-link">
+                    <span class="contact-link-index">02</span><span class="contact-link-name">PHONE</span><span class="contact-link-detail">+212 605033533</span><span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/makhzoumi-hiba/" class="contact-editorial-link" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-link-index">03</span><span class="contact-link-name">LINKEDIN</span><span class="contact-link-detail">linkedin.com/in/makhzoumi-hiba</span><span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a href="https://github.com/makhzoumihiba00-ops" class="contact-editorial-link" target="_blank" rel="noopener noreferrer">
+                    <span class="contact-link-index">04</span><span class="contact-link-name">GITHUB</span><span class="contact-link-detail">github.com/makhzoumihiba00-ops</span><span class="contact-link-arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a href="assets/cv.pdf" download="Hiba-Makhzoumi-CV.pdf" class="contact-editorial-link">
+                    <span class="contact-link-index">05</span><span class="contact-link-name">DOWNLOAD CV</span><span class="contact-link-detail">PDF <i>·</i> 77 KB</span><span class="contact-link-arrow" aria-hidden="true">↓</span>
+                  </a>
+                </nav>
+                <p class="contact-panel-location">BASED IN <span>MOROCCO</span></p>
+              </div>
+
+              <div class="final-contact-form-wrap">
+                <div class="final-contact-form-heading">
+                  <p class="contact-panel-kicker">OR WRITE A NOTE</p>
+                  <h4>Tell me what’s on your mind.</h4>
+                  <p>This form opens a pre-addressed email draft. Review and send it from your email app.</p>
+                </div>
+                <form id="contact-form" class="final-contact-form" novalidate>
+                  <div class="final-contact-fields">
+                    <div class="final-contact-field">
+                      <label for="contact-name">Name <span>*</span></label>
+                      <input type="text" id="contact-name" name="name" autocomplete="name" required maxlength="100" aria-describedby="error-contact-name" />
+                      <span class="error-message" id="error-contact-name" aria-live="polite"></span>
+                    </div>
+                    <div class="final-contact-field">
+                      <label for="contact-email">Email <span>*</span></label>
+                      <input type="email" id="contact-email" name="email" autocomplete="email" required maxlength="200" aria-describedby="error-contact-email" />
+                      <span class="error-message" id="error-contact-email" aria-live="polite"></span>
+                    </div>
+                    <div class="final-contact-field">
+                      <label for="contact-subject">Subject <span>*</span></label>
+                      <input type="text" id="contact-subject" name="subject" required maxlength="200" aria-describedby="error-contact-subject" />
+                      <span class="error-message" id="error-contact-subject" aria-live="polite"></span>
+                    </div>
+                    <div class="final-contact-field final-contact-message">
+                      <label for="contact-message">Message <span>*</span></label>
+                      <textarea id="contact-message" name="message" required rows="4" maxlength="1000" aria-describedby="error-contact-message"></textarea>
+                      <span class="error-message" id="error-contact-message" aria-live="polite"></span>
+                    </div>
+                  </div>
+                  <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+                  <button type="submit" class="final-contact-submit"><span>Open email draft</span><span aria-hidden="true">↗</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </dialog>
       </div>
     </section>
   </main>
@@ -554,28 +848,19 @@
     <a href="#contact" class="mobile-nav-link"><span aria-hidden="true">✉</span>Contact</a>
   </nav>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <span class="footer-logo">Hiba Makhzoumi</span>
-        <p class="footer-tagline">Full Stack Web Developer building functional and responsive web experiences.</p>
+  <footer class="footer final-footer">
+    <div class="container final-footer-container">
+      <div class="final-footer-top">
+        <a class="final-footer-signature" href="#home" aria-label="Hiba Makhzoumi — back to top">HIBA<span aria-hidden="true">✳</span></a>
+        <p class="final-footer-note">Designed with intention.<br />Built with curiosity.</p>
+        <a class="final-footer-backtop" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a>
       </div>
-
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/makhzoumi-hiba/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://github.com/makhzoumihiba00-ops" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-
-      <div class="footer-copyright">
-        <p>&copy; <span id="current-year">2026</span> Hiba Makhzoumi. All rights reserved.</p>
+      <div class="final-footer-bottom">
+        <p class="final-footer-copyright">&copy; <span id="current-year">2026</span> Hiba Makhzoumi. All rights reserved.</p>
+        <nav class="final-footer-nav" aria-label="Footer navigation">
+          <a href="#about">ABOUT</a><a href="#skills">TOOLKIT</a><a href="#experience">JOURNEY</a><a href="#projects">WORK</a><a href="#education">EDUCATION</a>
+        </nav>
+        <a class="final-footer-email" href="mailto:makhzoumihibz00@gmail.com">SAY HELLO <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </footer>

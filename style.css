@@ -5,21 +5,21 @@
   color-scheme: dark;
 
   /* Brand */
-  --accent-color: #8eb0ff;
+  --accent-color: #91a9ff;
   --accent-hover: #b5cbff;
-  --accent-light: rgba(105, 143, 225, 0.14);
+  --accent-light: rgba(145, 169, 255, 0.14);
   --accent-foreground: #ffffff;
 
   /* Dark theme */
-  --page-background: #0b1220;
-  --bg-color: rgba(18, 28, 46, 0.9);
-  --bg-secondary: rgba(25, 38, 61, 0.84);
-  --text-primary: #f1f5fc;
-  --text-secondary: #c2cde0;
-  --text-muted: #9aa9c1;
-  --border-color: rgba(166, 188, 228, 0.18);
-  --border-focus: #8eb0ff;
-  --focus-ring: 0 0 0 3px rgba(142, 176, 255, 0.22);
+  --page-background: #202020;
+  --bg-color: rgba(32, 32, 32, 0.96);
+  --bg-secondary: #292929;
+  --text-primary: #f1eee7;
+  --text-secondary: #c3bfb6;
+  --text-muted: #aaa69e;
+  --border-color: rgba(241, 238, 231, 0.18);
+  --border-focus: #91a9ff;
+  --focus-ring: 0 0 0 3px rgba(145, 169, 255, 0.24);
   --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.18);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.22);
   --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.28);
@@ -71,12 +71,9 @@ body {
   color: var(--text-primary);
   background-color: var(--page-background);
   background-image:
-    radial-gradient(ellipse at 16% 7%, rgba(52, 86, 175, 0.19), transparent 34rem),
-    radial-gradient(ellipse at 86% 39%, rgba(72, 42, 129, 0.13), transparent 36rem),
-    linear-gradient(rgba(174, 196, 239, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(174, 196, 239, 0.035) 1px, transparent 1px),
-    linear-gradient(145deg, #0b1220, #0d1424 54%, #0b1220);
-  background-size: auto, auto, 58px 58px, 58px 58px, auto;
+    linear-gradient(rgba(241, 238, 231, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(241, 238, 231, 0.045) 1px, transparent 1px);
+  background-size: 58px 58px;
   background-attachment: fixed;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -1982,7 +1979,7 @@ section[id] {
 }
 
 .contact-heading span {
-  color: #8eb0ff;
+  color: #91a9ff;
   font-style: italic;
   font-weight: 400;
 }
@@ -2061,7 +2058,7 @@ section[id] {
 }
 
 .contact-link:focus-visible {
-  outline: 2px solid #8eb0ff;
+  outline: 2px solid #91a9ff;
   outline-offset: 3px;
 }
 
@@ -2522,7 +2519,7 @@ section[id] {
 .education-kicker span {
   width: 1.7rem;
   height: 1px;
-  background: #8eb0ff;
+  background: #91a9ff;
 }
 
 .education-title {
@@ -2536,7 +2533,7 @@ section[id] {
 }
 
 .education-title span {
-  color: #8eb0ff;
+  color: #91a9ff;
   font-style: italic;
   font-weight: 400;
 }
@@ -2708,7 +2705,7 @@ section[id] {
   width: 1.05rem;
   height: 1.05rem;
   fill: none;
-  stroke: #8eb0ff;
+  stroke: #91a9ff;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 1.5;
